@@ -7,7 +7,6 @@ class TaskSerializer(serializers.ModelSerializer):
         fields=["id","title","description","due_date","priority","is_complete","created_at","last_updated_at"]
 
 class PhotoSerializer(serializers.ModelSerializer):
-    task = TaskSerializer()
     class Meta:
         model = Photo
         fields = ('id', 'task', 'image')
